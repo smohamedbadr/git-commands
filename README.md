@@ -62,15 +62,21 @@ Go to repo and raise a PR request to merge your changes to the main repo
 The changes from the feature will be reviewed and merged to the main/master branch
 
 Resolving Conflicts:
-go to repo main and edit the read me file and add some lines and commit
-come to your feature/git-workarround-feature branch and add some other lines at the same line numbers and add the changes
-now try to checkout the main branch
-you will get an error says please commit your changes before switch to other branches
-commit your changes
-while pushing you will get error says that pull first
-pull the latest from the main, will inform about the conflicts, we have to fix it locally and push our code to the remote repo.
-git diff will help you out to see the diff between two branches, means your current and the remote.
-git merge master -  from your branch to master.
+go to the main repo and edit the read me file and add some text and commit the changes
+back to your local repo and add some text in your local read me file  and then add and commit your local changes
+try to push your local changes to the remote repo you will be getting an error says that take a pull before push
+whilte pulling the changes from your remote repo it will try to merge it's own changes to your local read me file
+if there won't be conflicts then merge will be done without any issues. if there is any conflicts then that needs to be taken care
+open the file and see the revisions, HEAD is your local changes and the other changes would comes from the remote repo
+either you may revert your changer or remote or you can manually merge all your changes with remote. once the merge done 
+your local will be sync with the remote repo. now do git status and push your local changes to remote.
+
+git push local to remote - issue
+git pull origin remote repo
+git diff
+git merge 
+git status
+git push origin remote repo
 =============
 GIT INIT:
 
